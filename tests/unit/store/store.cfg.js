@@ -1,7 +1,8 @@
-import vuex from "@/store/index.js";
+import vuex from "@/store/modules/TaskList";
 import { v4 as uuidv4 } from "uuid";
 
 export default {
+
   state: {
     tasksList: [],
     filters: [
@@ -26,7 +27,7 @@ export default {
     ],
     activeFilter: "all"
   },
+  getters: vuex.getters,
   actions: vuex.actions,
   mutations: vuex.mutations,
-  getters: vuex.getters,
 };
