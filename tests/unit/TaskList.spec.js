@@ -19,8 +19,8 @@ describe('task list component - getters', () => {
       methods: {}
     });
     expect(wrapper.vm).toBeTruthy();
-    const div_task = wrapper.find("div");
-    expect(div_task.exists()).toBe(true);
+    const divTask = wrapper.find("div");
+    expect(divTask.exists()).toBe(true);
   });
   it('task list get data - false', async () => {
     const wrapper = mount(TaskList, {
@@ -32,8 +32,8 @@ describe('task list component - getters', () => {
       methods: {}
     });
     expect(wrapper.vm).toBeTruthy();
-    const empty_title = wrapper.find('h2');
-    expect(empty_title.is('h2')).toBe(true);
-    expect(empty_title.html()).toContain('<h2>добавьте задачи к выполнению!!!</h2>');
+    const emptyTitle = wrapper.find('h2');
+    expect(emptyTitle.exists()).toBe(true);
+    expect(emptyTitle.html()).toContain('<h2>добавьте задачи к выполнению!!!</h2>');
   });
 });

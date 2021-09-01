@@ -37,19 +37,19 @@ export default {
       }
     },
     countTask({ tasksList }) {
-      return () => {tasksList.length};
+      return tasksList.length;
     },
     countActiveTask({ tasksList }) {
-      return () => {tasksList.filter((task) => !task.isChecked).length};
+      return tasksList.filter((task) => !task.isChecked).length;
     },
     countCompletedTask({ tasksList }) {
-      return () => {tasksList.filter((task) => task.isChecked).length};
+      return tasksList.filter((task) => task.isChecked).length;
     },
     filterList({ filters }) {
-      return () => {filters};
+      return filters;
     },
     getActiveFilter({ activeFilter }) {
-      return () => {activeFilter};
+      return activeFilter;
     },
   },
   mutations: {

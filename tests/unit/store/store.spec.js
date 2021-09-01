@@ -51,10 +51,28 @@ describe("store testing:", () => {
     expect(store.state.activeFilter).toBe(filter);
   });
 
-  it("change active filter", () => {
-    const filter = 'active';
-    store.commit("changeActiveFilter", filter);
-    expect(store.state.activeFilter).toBe(filter);
+  it('test getters listTasks', () => {
+    expect(store.getters.listTasks).toStrictEqual(store.state.tasksList);
+  });
+
+  it('test getters countTask', () => {
+    expect(store.getters.countTask).toBe(store.state.tasksList.length);
+  });
+
+  it('test getters countActiveTask', () => {
+    expect(store.getters.countActiveTask).toBe(store.state.tasksList.length);
+  });
+
+  it('test getters countCompletedTask', () => {
+    expect(store.getters.countCompletedTask).toBe(store.state.tasksList.length);
+  });
+
+  it('test getters filterList', () => {
+    expect(store.getters.filterList).toStrictEqual(store.state.filters);
+  });
+
+  it('test getters getActiveFilter', () => {
+    expect(store.getters.getActiveFilter).toBe('active');
   });
 
 });

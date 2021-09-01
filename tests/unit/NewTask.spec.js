@@ -13,9 +13,9 @@ describe('new task component - mutations', () => {
   it('new task input button mutations', async () => {
     const wrapper = mount(NewTask, {store, localVue});
     expect(wrapper.vm).toBeTruthy();
-    const input_task = wrapper.find("input");
-    input_task.trigger("submit.prevent");
-    input_task.trigger("keypress.enter");
+    const inputTask = wrapper.find("input");
+    inputTask.trigger("submit.prevent");
+    inputTask.trigger("keypress.enter");
     expect(mutations.addNewTask).toHaveBeenCalled();
   });
   it('new task value data', async () => {

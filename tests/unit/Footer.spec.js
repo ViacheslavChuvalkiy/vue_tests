@@ -23,9 +23,9 @@ describe('footer component - getters', () => {
       methods: {}
     });
     expect(wrapper.vm).toBeTruthy();
-    const p_task = wrapper.find("p");
-    expect(p_task.exists()).toBe(true);
-    expect(p_task.html()).toContain('<p>test title</p>');
+    const pTask = wrapper.find("p");
+    expect(pTask.exists()).toBe(true);
+    expect(pTask.html()).toContain('<p>test title</p>');
   });
   it('formations title with getters', () => {
     const wrapper = mount(Footer, {

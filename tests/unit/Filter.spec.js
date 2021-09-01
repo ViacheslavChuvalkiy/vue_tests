@@ -12,9 +12,9 @@ describe('filter component  - mutations', () => {
   it('Filter button', async () => {
     const wrapper = mount(Filter, {store, localVue});
     expect(wrapper.vm).toBeTruthy();
-    const input_btn = wrapper.find("input");
-    await input_btn.trigger("submit.prevent");
-    await input_btn.trigger("change");
+    const inputBtn = wrapper.find("input");
+    await inputBtn.trigger("submit.prevent");
+    await inputBtn.trigger("change");
     expect(mutations.changeActiveFilter).toHaveBeenCalled();
   });
   it('input radio button - props', async () => {
@@ -24,11 +24,11 @@ describe('filter component  - mutations', () => {
         filterChecked: true
       }
     });
-    const input_btn = wrapper.find('input[type="radio"]');
-    await input_btn.trigger("submit.prevent");
-    await input_btn.setChecked();
-    expect(input_btn.element.checked).toBeTruthy();
-    expect(input_btn.element.value === 'Test').toBe(true);
+    const inputBtn = wrapper.find('input[type="radio"]');
+    await inputBtn.trigger("submit.prevent");
+    await inputBtn.setChecked();
+    expect(inputBtn.element.checked).toBeTruthy();
+    expect(inputBtn.element.value === 'Test').toBe(true);
   });
   it('span text - props', async () => {
     const wrapper = mount(Filter, {
@@ -36,8 +36,8 @@ describe('filter component  - mutations', () => {
         filterText: 'Test',
       }
     });
-    const span_text = wrapper.find('span');
-    expect(span_text).toBeTruthy();
+    const spanText = wrapper.find('span');
+    expect(spanText).toBeTruthy();
     expect(wrapper.html()).toContain('<span>Test</span>');
   });
 });
