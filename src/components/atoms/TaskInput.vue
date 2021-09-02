@@ -2,6 +2,7 @@
   <div :class="$style.newTask">
     <input
       type="text"
+      NewTaskInput
       placeholder="Add a new task"
       v-model="value"
       @keypress.enter="addTask"

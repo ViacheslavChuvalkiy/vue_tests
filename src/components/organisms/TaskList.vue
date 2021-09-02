@@ -1,5 +1,5 @@
 <template>
-  <div :class="$style.content">
+  <div :class="$style.content" toDoList>
     <template v-if="!isEmpty">
       <Task
         v-for="task in listTasks"

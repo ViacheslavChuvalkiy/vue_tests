@@ -1,5 +1,5 @@
 <template>
-  <div :class="$style.filter">
+  <div :class="$style.filter" filterButtons>
     <FilterBtn
       v-for="filter in filterList"
       :key="filter.id"
