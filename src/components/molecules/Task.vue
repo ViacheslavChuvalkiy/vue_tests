@@ -1,5 +1,5 @@
 <template>
-  <div :class="$style.task">
+  <div :class="$style.task" taskItem>
     <label>
       <input type="checkbox" :checked="taskChecked" @change="changeStatus" />
       <span :class="$style.itemStatus"></span>
